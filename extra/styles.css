@@ -1,0 +1,42 @@
+  * {
+      font-family: Century Gothic, sans-serif;
+      padding: 0;
+  }
+  form,
+  #name {
+      background: #ff33cc;
+      bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 2px;
+      position: center;
+      width: 40%;
+  }
+  form input {
+      border: 0;
+      padding: 10px;
+      width: 100%;
+  }
+  ul {
+      background: white;
+  }
+  li {
+      background: lightgreen;
+      border: 5px solid white;
+      border-radius: 20px;
+      padding: 5px 5px;
+  }
+  #messages div {
+      padding-left: 5%;
+  }
+  #messages li:nth-child(odd) {} 
+
+  #messages {
+      border: 1px solid #ccc;
+      height: 30em;
+      line-height: 15px;
+      margin: 0;
+      overflow: scroll;
+      overflow-x: hidden;
+      padding: 0;
+  }

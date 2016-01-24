@@ -1,0 +1,54 @@
+      * {
+          font-family: Century Gothic, sans-serif;
+          font-size: x-large;
+          font-weight: bold;
+          text-align: center;
+      }
+      div.tech {
+          vertical-align: bottom;
+          bottom: 0;
+      }
+      ul.img-list {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+      }
+      ul.img-list li {
+          display: inline-block;
+          height: 120px;
+          margin: 0 1em 1em 0;
+          position: relative;
+          width: 120px;
+      }
+      span.text-content span {
+          display: table-cell;
+          text-align: center;
+          vertical-align: middle;
+      }
+      span.text-content {
+          background: rgba(0, 0, 0, 0.5);
+          color: white;
+          cursor: pointer;
+          display: table;
+          height: 120px;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 120px;
+          opacity: 0;
+          -webkit-transition: opacity 500ms;
+          -moz-transition: opacity 500ms;
+          -o-transition: opacity 500ms;
+          transition: opacity 500ms;
+      }
+      ul.img-list li:hover span.text-content {
+          opacity: 1;
+      }
+      html {
+          background: url(../images/cmu-back.jpg) no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+      }

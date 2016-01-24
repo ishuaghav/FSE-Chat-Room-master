@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Homepage</title>
+      <link rel="stylesheet" type="text/css" href="css/home.css">
+      <link rel="icon" href="images/favicon.png">
+   </head>
+   <body>
+      <img class="a" src="images/cmu.jpg"  height="120" />
+      <br><br><br><br>
+      <div>click to enter the chatroom</div>
+      <img src="images/enter.png" width="120" height="120" onclick="ping();" />
+      <br><br><br><br><br><br><br><br>
+      <div class="tech">
+         <ul class="img-list" style="float:bottom;">
+            <li>
+               <img src="images/stack/node.png" width="120" height="120" />
+               <span class="text-content"><span>node.js</span></span>
+            </li>
+            <li>
+               <img src="images/stack/socket.png" width="120" height="120" />
+               <span class="text-content"><span>socket.io</span></span>
+            </li>
+            <li>
+               <img src="images/stack/express.png" width="120" height="120" />
+               <span class="text-content"><span>express.js</span></span>
+            </li>
+            <li>
+               <img src="images/stack/sql.png" width="120" height="120" />
+               <span class="text-content"><span>sqlite 3</span></span>
+            </li>
+            <li>
+               <img src="images/stack/jade.png" width="120" height="120" />
+               <span class="text-content"><span>Jade Template Engine</span></span>
+            </li>
+            <li>
+               <img src="images/stack/html.png" width="120" height="120" />
+               <span class="text-content"><span>HTML 5</span></span>
+            </li>
+            <li>
+               <img src="images/stack/css.png" width="120" height="120" />
+               <span class="text-content"><span>CSS 3</span></span>
+            </li>
+            <li>
+               <img src="images/stack/js.png" width="120" height="120" />
+               <span class="text-content"><span>JavaScript</span></span>
+            </li>
+            <li>
+               <img src="images/stack/github.png" width="120" height="120" />
+               <span class="text-content"><span>GitHub</span></span>
+            </li>
+         </ul>
+      </div>
+      <br>
+   </body>
+   <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+   <script type="text/javascript">
+      function ping(){
+         $.ajax({
+            url: 'http://localhost:3000/chat',
+            success: function(result){
+               $(location).attr('href','http://localhost:3000/chat');
+            },     
+            error: function(result){
+                alert('The chatroom engine seems to be turned off! Please contact gaurav.walia@cmu.edu');
+            }
+         });
+      }
+   </script>
+</html>

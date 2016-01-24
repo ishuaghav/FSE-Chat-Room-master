@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    meta(name='description', content='FSE Chatroom Ramp up assignment for Carnegie Mellon University')
+    meta(name='author', content='gaurav.walia@cmu.edu')
+    title FSE ChatRoom
+    link(rel='icon', href='images/favicon.png')
+    link(rel='stylesheet', type='text/css', href='css/styles-min.css')
+  body
+    div(style='margin-right:auto; margin-left:auto;')
+      form(onsubmit='return false')
+        #login(style='text-align:center')
+          | What do we call you?
+          input#m1(style='text-align:center', autocomplete='off', placeholder='think of a username')
+          input#loginButton(type='submit', value='Enter chatroom!', onclick="OnSubmit('fromLogin');")
+        #logout(style='text-align:center')
+          div(style='float:left')
+            input(type='submit', value='Logout', onclick="OnSubmit('fromLogout');")
+          #username(style='float:right')
+        br
+        br
+        #chatroom
+          p
+          ul#messages
+          input#m(autocomplete='off', placeholder='type here')
+          input#sendButton(type='submit', value='Send!', onclick="OnSubmit('fromChatWindow');")
+  script(src='/socket.io/socket.io.js')
+  script(src='js/jquery-2.1.4.min.js')
+  script(src='js/main-min.js')
